@@ -1,14 +1,80 @@
-# Brain-Tumor-Detection
-1-Dataset Creation:
-The data includes two numerical features: File Count and Description_Length, and a target Subdirectory that is encoded into 0 (no tumor) and 1 (tumor).
+# 🧠 Brain Tumor Detection using Machine Learning
 
-2-Train-Test Split:
-The data is split into 67% training and 33% testing, using stratify=y to ensure balanced classes in both training and testing datasets.
+This project demonstrates a **machine learning–based brain tumor detection system** using structured numerical data. The goal is to classify whether a case indicates the presence of a tumor (**1**) or no tumor (**0**) by training and comparing different classification models.
 
-3-Model Training:
-Random Forest Model: A RandomForestClassifier with 100 trees is trained on the data.
-Decision Tree Model: A simpler DecisionTreeClassifier with a maximum depth of 3 is also trained.
 
-4-Prediction and Evaluation:
-Predictions are made on the test data using both models.
-The accuracy and classification report (which includes precision, recall, f1-score) are printed for both models. 
+## 📂 Dataset Description
+
+The dataset is synthetically structured and contains the following features:
+
+* **File_Count**: Number of related files or records
+* **Description_Length**: Length of the associated textual description
+* **Subdirectory (Target Variable)**:
+
+  * `0` → No Tumor
+  * `1` → Tumor
+
+The target variable is label-encoded to make it suitable for machine learning classification.
+
+
+## 🔀 Train–Test Split
+
+* The dataset is split into:
+
+  * **67% Training Data**
+  * **33% Testing Data**
+* `stratify=y` is used during splitting to ensure **balanced class distribution** across training and testing sets, preventing bias in model evaluation.
+
+
+## 🧠 Models Used
+
+Two supervised learning models are trained and compared:
+
+### 🌲 Random Forest Classifier
+
+* Ensemble-based model with **100 decision trees**
+* Reduces overfitting and improves prediction stability
+* Suitable for capturing complex feature interactions
+
+### 🌳 Decision Tree Classifier
+
+* Simple and interpretable model
+* Configured with **maximum depth = 3** to avoid overfitting
+* Useful for understanding decision rules
+
+
+## 📊 Prediction & Evaluation
+
+Both models are evaluated on the test dataset using:
+
+* **Accuracy Score**
+* **Classification Report**, including:
+
+  * Precision
+  * Recall
+  * F1-score
+
+This comparison helps identify the model that performs better in terms of overall accuracy and class-wise performance.
+
+
+## 🛠️ Tools & Technologies
+
+* Python
+* Pandas & NumPy
+* scikit-learn
+* RandomForestClassifier
+* DecisionTreeClassifier
+
+
+## 🔮 Future Improvements
+
+* 🧬 Add medical imaging features (MRI-based pixel data)
+* 🤖 Apply deep learning models such as **CNNs** for image-based tumor detection
+* 📈 Use cross-validation for more robust evaluation
+* ⚖️ Address class imbalance using SMOTE or class weighting
+* 🌐 Deploy as a web application using **Flask** or **Streamlit**
+
+
+## 📌 Conclusion
+
+This project provides a clear comparison between **ensemble** and **tree-based** classifiers for tumor detection. It highlights the importance of model selection, evaluation metrics, and balanced data splitting in healthcare-related machine learning applications.
