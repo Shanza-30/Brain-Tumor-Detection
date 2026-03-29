@@ -78,3 +78,4 @@ This comparison helps identify the model that performs better in terms of overal
 ## 📌 Conclusion
 
 This project provides a clear comparison between **ensemble** and **tree-based** classifiers for tumor detection. It highlights the importance of model selection, evaluation metrics, and balanced data splitting in healthcare-related machine learning applications.
+
